@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DistanceUnitIndicator" type="xs:string" minOccurs="0" />
+        <xs:element name="Project" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FileName" type="xs:string" minOccurs="0" />
+              <xs:element name="JobName" type="xs:string" minOccurs="0" />
+              <xs:element name="DistanceUnitIndicator" type="xs:string" minOccurs="0" />
+              <xs:element name="Datum" type="xs:string" minOccurs="0" />
+              <xs:element name="AngleUnitIndicator" type="xs:string" minOccurs="0" />
+              <xs:element name="GridFactor" type="xs:string" minOccurs="0" />
+              <xs:element name="Scale" type="xs:string" minOccurs="0" />
+              <xs:element name="Elevation" type="xs:string" minOccurs="0" />
+              <xs:element name="Press" type="xs:string" minOccurs="0" />
+              <xs:element name="Temp" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Point" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PointNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Code" type="xs:string" minOccurs="0" />
+              <xs:element name="Fixed" type="xs:string" minOccurs="0" />
+              <xs:element name="Northing" type="xs:string" minOccurs="0" />
+              <xs:element name="Easting" type="xs:string" minOccurs="0" />
+              <xs:element name="OrthoHeight" type="xs:string" minOccurs="0" />
+              <xs:element name="Feature" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Code" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="StdDev" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Northing" type="xs:string" minOccurs="0" />
+                    <xs:element name="Easting" type="xs:string" minOccurs="0" />
+                    <xs:element name="Up" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Station" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StationPoint" type="xs:string" minOccurs="0" />
+              <xs:element name="StationCode" type="xs:string" minOccurs="0" />
+              <xs:element name="InstrumentHeight" type="xs:string" minOccurs="0" />
+              <xs:element name="Northing" type="xs:string" minOccurs="0" />
+              <xs:element name="Easting" type="xs:string" minOccurs="0" />
+              <xs:element name="OrthoHeight" type="xs:string" minOccurs="0" />
+              <xs:element name="Observation" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ObsType" type="xs:string" minOccurs="0" />
+                    <xs:element name="PointNumber" type="xs:string" minOccurs="0" />
+                    <xs:element name="AngleUnitIndicator" type="xs:string" minOccurs="0" />
+                    <xs:element name="DistanceUnitIndicator" type="xs:string" minOccurs="0" />
+                    <xs:element name="BacksightBearing" type="xs:string" minOccurs="0" />
+                    <xs:element name="HorizontalAngle" type="xs:string" minOccurs="0" />
+                    <xs:element name="Date" type="xs:string" minOccurs="0" />
+                    <xs:element name="Code" type="xs:string" minOccurs="0" />
+                    <xs:element name="Northing" type="xs:string" minOccurs="0" />
+                    <xs:element name="Easting" type="xs:string" minOccurs="0" />
+                    <xs:element name="OrthoHeight" type="xs:string" minOccurs="0" />
+                    <xs:element name="PrismHeight" type="xs:string" minOccurs="0" />
+                    <xs:element name="VerticalAngle" type="xs:string" minOccurs="0" />
+                    <xs:element name="ZenithAngle" type="xs:string" minOccurs="0" />
+                    <xs:element name="SlopeDistance" type="xs:string" minOccurs="0" />
+                    <xs:element name="HorizontalDistance" type="xs:string" minOccurs="0" />
+                    <xs:element name="MeasurementType" type="xs:string" minOccurs="0" />
+                    <xs:element name="VerticalDistance" type="xs:string" minOccurs="0" />
+                    <xs:element name="VerticalOffset" type="xs:string" minOccurs="0" />
+                    <xs:element name="RadialOffset" type="xs:string" minOccurs="0" />
+                    <xs:element name="TangentialOffset" type="xs:string" minOccurs="0" />
+                    <xs:element name="OffsetType" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="data" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
